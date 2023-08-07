@@ -3,6 +3,7 @@ import Home from './components/Home';
 // import About from './components/About';
 import Navbar from './components/Navbar';
 import HeroDetails from './components/HeroDetails';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         {/* <Route path={'about'} element={<About />} /> */}
         <Route path={'/:id'} element={<HeroDetails />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
