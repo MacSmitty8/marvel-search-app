@@ -1,21 +1,21 @@
 import { MD5 } from "crypto-js";
 const API_URL = process.env.REACT_APP_BASE_URL;
 
-//I imported MD5
+//I imported MD5 from crypto-js because the Marvel website provided a private API key as well as a public one.
 
 const getHash = (ts, secretKey, publicKey) => {
     return MD5(ts + secretKey + publicKey).toString()
 }
 
-const fetchHeroes = async (value) => {
-    let baseUrl = `${API_URL}/v1/public/character`
+const fetchHeroes = async (id) => {
+    let baseUrl = `${API_URL}/v1/public/characters/${id}`
 
     let ts = Date.now().toString()
     let apiKey = process.env.REACT_APP_BASE_URL
     let privateKey = process.env.REACT_APP_PRIVATE_KEY
     let hash = getHash(ts, privateKey, apiKey)
 
-    let url =`${baseUrl}?ts=${ts}&apikey=${apiKey}&hash=${hash}&nameStartsWith=${value}`
+    let url =`${baseUrl}?ts=${ts}&apikey=${apiKey}&hash=${hash}`
 
     try {
         let response = await fetch(url)
