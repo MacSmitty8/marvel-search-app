@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import { fetchHeroes } from '../utils/fetchFromMarvel';
 
 export default function Searchbar({setter}) {
     let input = useState("");
