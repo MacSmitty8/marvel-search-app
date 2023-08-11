@@ -1,4 +1,4 @@
-*,
+/* *,
 *::before,
 *::after {
   margin: 0;
@@ -59,7 +59,7 @@ form input {
 }
 
 /* Navbar */
-.navbar {
+/* .navbar {
   width: min(90%, 75rem);
   margin: 0 auto;
   min-height: 3rem;
@@ -80,7 +80,7 @@ header {
   background-color: white;
 }
 
-/* Container */
+/* Container 
 .container {
   width: min(90%, 45rem);
   margin: 2rem auto;
@@ -161,4 +161,4 @@ header {
 .hero__details li {
   list-style: disc;
   margin-left: 1.5rem;
-}
+} */ 

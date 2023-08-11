@@ -4,18 +4,27 @@ import Home from './components/Home';
 import Navbar from './components/Navbar';
 import HeroDetails from './components/HeroDetails';
 import Footer from './components/Footer';
+import { useState } from 'react';
 
 function App() {
+
+  // const apiKey = "16517c362976517adee91f273ed8cf81";
+  const [hero, setHeros] = useState();
+  
+  
+
   return (
-    <Router>
-    <Navbar />
+    <>
+    {/* // <Router> */}
+    {/* <Navbar /> */}
       <Routes>
-        <Route path={'/'} element={<Home />} />
+        <Route path='/' element={<Home />} />
         {/* <Route path={'about'} element={<About />} /> */}
-        <Route path={'/:id'} element={<HeroDetails />} />
+        <Route path='/:id' element={<HeroDetails />} />
       </Routes>
-      <Footer />
-    </Router>
+    {/* // </Router> */}
+    <Footer />
+    </>
   );
 }
 
